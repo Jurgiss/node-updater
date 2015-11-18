@@ -1,0 +1,11 @@
+{
+  "name": "npm-updater",
+  "version": "1.0.0",
+  "description": "Updates npm and it's pacakges",
+  "main": "start.bat",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jurgis Sinkevičius",
+  "license": "ISC"
+}
