@@ -9,10 +9,10 @@ $appToUninstall = Get-WmiObject -Class Win32_Product -Filter "Name = 'Node.js'"
 $appToUninstall.Uninstall()
 
 echo "Cleaning up nodeJs cache"
-Cmd /C "echo off; rmdir /S /Q %appdata%\npm-cache"
+Cmd /C "rmdir /S /Q %appdata%\npm-cache"
 
 echo "Cleaning up nodeJs global packages"
-Cmd /C "echo off; rmdir /S /Q %appdata%\npm"
+Cmd /C "rmdir /S /Q %appdata%\npm"
 
 echo "Installing nodeJs"
 $ia = "/i nodejs.msi", "/passive"
@@ -23,3 +23,5 @@ npm -g update
 
 echo "Restoring global npm packages"
 node .\restoreGlobalPackages.js
+
+echo "All done, enjoy :)"

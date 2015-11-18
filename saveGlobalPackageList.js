@@ -12,5 +12,5 @@ function parsePackages(npmPackageString){
 
 exec(packageListCmd, function(err, stdOut, stdErr){
   var packageList = parsePackages(stdOut);
-  fs.writeFile('consoleOutput.txt', packageList);
+  fs.writeFile('globalPackageList.txt', packageList);
 });

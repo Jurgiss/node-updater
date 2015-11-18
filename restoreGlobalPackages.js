@@ -3,9 +3,8 @@ var fs = require('fs');
 
 var packageListCmd = 'npm install -g '
 
-fs.readFile('consoleOutput.txt', function(err, data){
+fs.readFile('globalPackageList.txt', function(err, data){
   var npmCommand = packageListCmd + data;
-  console.log(npmCommand);
   exec(npmCommand, function(err, stdOut, stdErr){
     if (err){
       console.log('Error restoring packages!');
